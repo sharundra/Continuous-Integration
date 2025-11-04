@@ -1,0 +1,10 @@
+1. Create a repo, "Continuous Integration" and clone it in local
+# remember to clone with a PAT which has scope of 'workflow' also as cloning with a PAT without 'workflow' scope won't let us push CI/CD workflow.
+2. Create one streamlit based python script.
+3. Run it using command "streamlit run app.py"
+# Services like Github Actions/ Jetkins/ TravisCI automate the CI flow.
+4. To perform CI using Github Actions, add a folder ".github/workflows" and add ci.yaml script inside it.
+# ci.yaml contains job setup(like trigger CI on any git push or pull request etc.), checkout to actions/checkout repo, python setup, dependencies installations and customized test running.
+5. In the main repo folder, add _test.py, which contains automatic tests to be performed on app.py in CI using Github Actions.
+6. Pushing this repo now will trigger Github Actions to automatically act as per ci.yaml, so push the changes of repo.
+# On github website, Go to reposiotries -> Actions and there one can find executed tests.

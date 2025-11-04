@@ -8,3 +8,5 @@
 5. In the main repo folder, add _test.py, which contains automatic tests to be performed on app.py in CI using Github Actions.
 6. Pushing this repo now will trigger Github Actions to automatically act as per ci.yaml, so push the changes of repo.
 # On github website, Go to reposiotries -> Actions and there one can find executed tests.
+7. Update ci.yaml to add checks for quality control using flake8. Then push the code.
+8. Create a new branch "autoformatting_code" and update ci.yaml to add ruff installation to automatically fix most of the code formatting issues. Then push the code.
